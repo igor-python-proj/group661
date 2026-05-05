@@ -24,4 +24,4 @@ class Cat(Animal):
 
 puppy = Dog()
 puppy.make_sound()
-kitty = Cat()
+# kitty = Cat() # тут ошибка - класс не реализовал весь набор абс методов
