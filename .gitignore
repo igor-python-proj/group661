@@ -5,4 +5,4 @@ venv/
 .env
 
 database.db
-database.sqlite
+*.sqlite
