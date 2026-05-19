@@ -45,21 +45,22 @@ class Car:
             raise ValueError("Новая скорость меньше нуля")
         self.__max_speed = new_speed
 
-car1 = Car("черный", "BMW")
-car2 = Car("белый")
-print(car1.color, car1.model)
-# print(car1.__max_speed) # Ошибка
-car1.drive_to("Кант")
-print("Оштрафован:", "да" if car1._fined else "нет" )
-car1._calculated_fuel()
-car1.__max_speed = 200 # Не настоящий __max_speed из класса
-# print(car2.__max_speed)
-print("Car 1 max_speed: ", car1.get_max_speed())
-car1.set_max_speed(180)
-print("Car 1 max_speed: ", car1.get_max_speed())
-print(f"Car 1 max_speed: {car1.max_speed}")
-car1.max_speed = 200
-print(f"Car 1 max_speed: {car1.max_speed}")
+if __name__ == "__main__":
+    car1 = Car("черный", "BMW")
+    car2 = Car("белый")
+    print(car1.color, car1.model)
+    # print(car1.__max_speed) # Ошибка
+    car1.drive_to("Кант")
+    print("Оштрафован:", "да" if car1._fined else "нет" )
+    car1._calculated_fuel()
+    car1.__max_speed = 200 # Не настоящий __max_speed из класса
+    # print(car2.__max_speed)
+    print("Car 1 max_speed: ", car1.get_max_speed())
+    car1.set_max_speed(180)
+    print("Car 1 max_speed: ", car1.get_max_speed())
+    print(f"Car 1 max_speed: {car1.max_speed}")
+    car1.max_speed = 200
+    print(f"Car 1 max_speed: {car1.max_speed}")
 
-# name mangling
-print(f"car 1 max_speed private: {car1._Car__max_speed}") # Такое только для тестирования
+    # name mangling
+    print(f"car 1 max_speed private: {car1._Car__max_speed}") # Такое только для тестирования
